@@ -1,0 +1,18 @@
+.hiring-section {
+    padding-top: 80px;
+  }
+  
+.hiring-heading-area {
+    text-align: center;
+}
+
+.hiring-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.hiring-subtext {
+    margin-top: 1%;
+    color: grey;
+}

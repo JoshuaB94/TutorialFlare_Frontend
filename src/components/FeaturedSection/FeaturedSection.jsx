@@ -1,13 +1,11 @@
-import './HomePage.css';
+import './FeaturedSection.css';
 import * as React from 'react';
 import { Button } from '@mui/material';
 import { Avatar } from '@mui/material';
 import { Container } from '@mui/material';
 import { Grid } from '@mui/material';
 
-
-
-const HomePage = () => {
+const FeaturedSection = () => {
     return ( 
         <Container className="featured-section" maxWidth="fluid">
             <Grid container className="featured-grid">
@@ -24,4 +22,4 @@ const HomePage = () => {
      );
 }
  
-export default HomePage;
+export default FeaturedSection;
