@@ -1,6 +1,7 @@
 import './HireVCSection.css';
 import * as React from 'react';
 import { Container } from '@mui/material';
+import VideoCreatorCard from '../VideoCreatorCard/VideoCreatorCard';
 
 const HireVCSection = () => {
     return (
@@ -10,6 +11,9 @@ const HireVCSection = () => {
                 <p className="hiring-subtext">Click on a Creator Card to view more information about the Video Tutorial Creator and if he/she is a right fit for your company's need.</p>
             </div>
             {/* Filter Dropdown would go here. Might consider creating a Filter Dropdown component */}
+            <div className="vc-hiring-cards">
+                <VideoCreatorCard />
+            </div>
         </Container>
     );
 }

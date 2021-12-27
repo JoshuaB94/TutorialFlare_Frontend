@@ -1,6 +1,7 @@
 .hiring-section {
     padding-top: 80px;
-  }
+    height: 100vh;
+}
   
 .hiring-heading-area {
     text-align: center;
@@ -15,4 +16,8 @@
 .hiring-subtext {
     margin-top: 1%;
     color: grey;
+}
+
+.vc-hiring-cards {
+    margin-top: 5%;
 }
