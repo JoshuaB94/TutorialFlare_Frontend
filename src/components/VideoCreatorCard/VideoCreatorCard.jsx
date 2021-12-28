@@ -8,7 +8,7 @@ import { AiFillYoutube, AiOutlineTwitter, AiFillMail } from 'react-icons/ai'
 
 const VideoCreatorCard = () => {
   return (
-    <Card sx={{ maxWidth: 250 }} className="vc-profile-card">
+    <Card sx={{ maxWidth: 350 }} className="vc-profile-card">
       <CardActionArea>
         <Avatar src="/broken-image.jpg" sx={{width: 90, height: 90}} className="card-avatar"/>
         <CardContent>

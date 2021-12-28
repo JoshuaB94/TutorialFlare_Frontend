@@ -20,4 +20,9 @@
 
 .vc-hiring-cards {
     margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
 }
+
