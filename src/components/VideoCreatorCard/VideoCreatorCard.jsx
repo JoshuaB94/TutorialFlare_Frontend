@@ -8,17 +8,17 @@ import { AiFillYoutube, AiOutlineTwitter, AiFillMail } from 'react-icons/ai'
 
 const VideoCreatorCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }} className="vc-profile-card">
+    <Card sx={{ maxWidth: 250 }} className="vc-profile-card">
       <CardActionArea>
-        <Avatar src="/broken-image.jpg" sx={{width: 150, height: 150}}/>
+        <Avatar src="/broken-image.jpg" sx={{width: 90, height: 90}} className="card-avatar"/>
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h6" component="div" className="card-name">
             John Doe
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" className="card-location">
             City, State
           </Typography>
-          <div>
+          <div className="card-social-links">
             <AiFillYoutube className="youtube-icon" />
             <AiOutlineTwitter className="twitter-icon"/>
             <AiFillMail className="mail-icon" />
