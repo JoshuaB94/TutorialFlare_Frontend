@@ -11,6 +11,7 @@
     background-color: orange;
     width: 35%;
     padding: 50px;
+    text-align: center;
 }
 
 .company-login-button {
@@ -33,4 +34,16 @@
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.goto-link {
+    color: black;
+}
+
+.goto-link:hover {
+    color: grey;
+}
+
+.link-wrapper {
+    margin-top: 10%;
 }

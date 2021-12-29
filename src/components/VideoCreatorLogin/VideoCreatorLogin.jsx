@@ -37,7 +37,7 @@ const VideoCreatorLogin = () => {
                 <FormInput name="email" placeholder="Email Address"/>
                 <FormInput name="password " placeholder="Password"/>
                 <button className="vc-login-button">Login</button>
-                <Link to="/company-login">Company Login</Link>
+                <Link to="/login">Back to Login</Link>
             </form>
         </div>
         

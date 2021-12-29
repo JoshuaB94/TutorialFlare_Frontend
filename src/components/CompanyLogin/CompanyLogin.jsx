@@ -37,8 +37,10 @@ const CompanyLogin = () => {
                 <h1 className="company-form-heading">Company Login</h1>
                 <FormInput name="email" placeholder="Email Address"/>
                 <FormInput name="password " placeholder="Password"/>
-                <button className="company-login-button">Login</button>
-                <Link to="/videocreator-login">Video Creator Login</Link>
+                <button className="company-login-button" type="submit">Login</button>
+                <div className="link-wrapper">
+                    <Link to="/login" className="goto-link">Back to Login</Link>
+                </div>
             </form>
         </div>
         
