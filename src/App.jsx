@@ -1,19 +1,19 @@
 import './App.css';
 import React, { Component } from 'react';
-import NavBar from './components/NavBar/NavBar';
-import FeaturedSection from './components/FeaturedSection/FeaturedSection';
-import HireVCSection from './components/HireVCSection/HireVCSection';
-import Login from './components/Login/Login'
+// import NavBar from './components/NavBar/NavBar';
+import Login from './components/Login/Login';
+import HomePage from './components/HomePage/HomePage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        <Login />
-        {/* <FeaturedSection /> */}
-        {/* <HireVCSection /> */}
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="login" element={<Login />}/>
+        </Routes>
+      </BrowserRouter>
     )
   }
 }
