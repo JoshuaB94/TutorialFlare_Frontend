@@ -6,11 +6,28 @@ import HomePage from './components/HomePage/HomePage';
 import VideoCreatorLogin from './components/VideoCreatorLogin/VideoCreatorLogin';
 import CompanyLogin from './components/CompanyLogin/CompanyLogin';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
 
 class App extends Component {
+  state =  {
+    company: ""
+  }
+
+  componentDidMount() {
+    const jwt = localStorage.getItem('token');
+    try {
+      const company = jwtDecode(jwt);
+      this.setState({company})
+    } catch {
+
+    }
+  }
+
   render() {
+    const company = this.state.company;
     return (
-      <BrowserRouter>
+      <BrowserRouter> 
+      {console.log("Company", company)}
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="login" element={<Login />}/>
