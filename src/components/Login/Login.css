@@ -1,6 +1,58 @@
-.login-form {
+.login-page {
+    background-color: rgb(39, 39, 39);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+}
+
+.login-selection {
+    background-color: orange;
+    padding: 50px;
+    text-align: center;
+    width: 35%;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 4%;
+}
+
+.login-button {
+    width: 100%;
+    border-style: none;
+    background-color: black;
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1em;
+    margin-top: 4%;
+}
+
+.login-button:hover {
+    background-color: rgb(218, 88, 88);
+}
+
+.button-link {
+    text-decoration: none;
+    color: white;
+}
+
+.button-link:hover {
+    color: white;
+}
+
+.goto-link {
+    color: black;
+}
+
+.goto-link:hover {
+    color: grey;
+}
+
+.link-wrapper {
+    margin-top: 10%;
 }
