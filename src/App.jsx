@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import HomePage from './components/HomePage/HomePage';
 import VideoCreatorLogin from './components/VideoCreatorLogin/VideoCreatorLogin';
 import CompanyLogin from './components/CompanyLogin/CompanyLogin';
+import Register from './components/Register/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
@@ -24,15 +25,14 @@ class App extends Component {
   }
 
   render() {
-    const company = this.state.company;
     return (
       <BrowserRouter> 
-      {console.log("Company", company)}
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="login" element={<Login />}/>
           <Route path="company-login" element={<CompanyLogin />}/>
           <Route path="videocreator-login" element={<VideoCreatorLogin />}/>
+          <Route path="register" element={<Register />}/>
         </Routes>
       </BrowserRouter>
     )

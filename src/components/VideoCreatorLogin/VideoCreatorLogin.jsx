@@ -1,5 +1,4 @@
 import './VideoCreatorLogin.css';
-import FormInput from '../FormInput/FormInput';
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const VideoCreatorLogin = () => {
         e.preventDefault();
 
         const getVideoCreator = {
-            emailAddress: email,
+            email: email,
             password: password
         };
 
@@ -34,13 +33,14 @@ const VideoCreatorLogin = () => {
         <div className="vc-login-page">
             <form className="vc-login-form" onSubmit={handleSubmit}>
                 <h1 className="vc-form-heading">Video Creator Login</h1>
-                <FormInput name="email" placeholder="Email Address"/>
-                <FormInput name="password " placeholder="Password"/>
-                <button className="vc-login-button">Login</button>
-                <Link to="/login">Back to Login</Link>
+                <input type="text" placeholder="Email Address" value={email} onChange={(e) => getEmail(e.target.value)}/>
+                <input type="text" placeholder="Password" value={password} onChange={(e) => getPassword(e.target.value)}/>
+                <button className="vc-login-button" type="submit">Login</button>
+                <div className="link-wrapper">
+                    <Link to="/login" className="goto-link">Back to Login</Link>
+                </div>
             </form>
         </div>
-        
     );
 }
  

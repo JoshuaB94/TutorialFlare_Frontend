@@ -1,12 +1,10 @@
 import './CompanyLogin.css';
-// import FormInput from '../FormInput/FormInput';
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 
 
-const CompanyLogin = (props) => {
+const CompanyLogin = () => {
     const [email, getEmail] = useState("");
     const [password, getPassword] = useState("");
 
@@ -14,7 +12,7 @@ const CompanyLogin = (props) => {
         e.preventDefault();
 
         const getCompany = {
-            emailAddress: email,
+            email: email,
             password: password,
         };
 
@@ -27,9 +25,9 @@ const CompanyLogin = (props) => {
             window.location ='/';
         };
 
-        // if (response.status === 400) {
-        //     console.log(response.error)
-        // }
+        if (response.status === 400) {
+            console.log(`There is an error: ${response.error}`)
+        }
 
     }
 
@@ -39,7 +37,7 @@ const CompanyLogin = (props) => {
                 <h1 className="company-form-heading">Company Login</h1>
                 <input type="text" placeholder="Email Address" value={email} onChange={(e) => getEmail(e.target.value)}/>
                 <input type="text" placeholder="Password" value={password} onChange={(e) => getPassword(e.target.value)}/>
-                <button className="company-login-button" type="submit" type="submit">Login</button>
+                <button className="company-login-button" type="submit">Login</button>
                 <div className="link-wrapper">
                     <Link to="/login" className="goto-link">Back to Login</Link>
                 </div>
@@ -47,8 +45,5 @@ const CompanyLogin = (props) => {
         </div>
     );
 }
-// CompanyLogin.propTypes={
-//     setToken:PropTypes.func.isRequired
-// }
  
 export default CompanyLogin;
