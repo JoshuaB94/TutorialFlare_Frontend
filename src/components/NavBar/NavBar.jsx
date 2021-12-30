@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'Hire a Creator', 'Pricing'];
+const pages = ['Home', 'Hire a Creator', 'Register/Login'];
 const settings = ['Profile', 'Profile Settings', 'Logout'];
 
 const NavBar = () => {

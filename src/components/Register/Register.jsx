@@ -1,14 +1,22 @@
 import './Register.css';
-import axios from 'axios';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Register = () => {
-
-
-    
+const Register = () => {    
     return ( 
         <div className="registration-page">
-            <p>Dynamic Registration Form Goes Here</p>
+            <div className="registration-selection">
+                <h1>Register as a...</h1>
+                <Link to="/company-registration" className="button-link">
+                    <button className="register-button">Company</button>
+                </Link>
+                <Link to="/videocreator-registration" className="button-link">
+                    <button className="register-button">Video Creator</button>
+                </Link>
+
+                <div className="link-wrapper">
+                    <Link to="/login" className="goto-link">Already have an account? Click to login.</Link>
+                </div>
+            </div>
         </div>
      );
 }

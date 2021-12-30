@@ -16,6 +16,8 @@ const Login = () => {
                 
                 <div className="link-wrapper">
                     <Link to="/" className="goto-link">Go Back to Home</Link>
+                    {' | '}
+                    <Link to="/register" className="goto-link">Create an Account</Link>
                 </div>
             </div>
         </div>
