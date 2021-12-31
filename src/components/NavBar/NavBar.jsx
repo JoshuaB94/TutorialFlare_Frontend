@@ -13,14 +13,19 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import Logout from '../Logout/Logout';
 
 const pages = [
   <Link to="/" className="navbar-link">Home</Link>, 
   'Hire a Creator', 
-  <Link to="/register" className="navbar-link">Register/Login</Link>
+  <Link to="/login" className="navbar-link">Login/Register</Link>
 ];
 
-const settings = ['Profile', 'Profile Settings', 'Logout'];
+const settings = [
+  'Profile', 
+  'Profile Settings',
+  <Logout />
+];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
