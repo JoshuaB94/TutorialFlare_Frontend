@@ -7,19 +7,23 @@ import VideoCreatorLogin from './components/VideoCreatorLogin/VideoCreatorLogin'
 import CompanyLogin from './components/CompanyLogin/CompanyLogin';
 import Register from './components/Register/Register';
 import RegisterCompany from './components/RegisterCompany/RegisterCompany';
+import RegisterVideoCreator from './components/RegisterVideoCreator/RegisterVideoCreator';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
 class App extends Component {
   state =  {
-    company: ""
+    company: "",
+    videocreator: ""
   }
 
   componentDidMount() {
     const jwt = localStorage.getItem('token');
     try {
       const company = jwtDecode(jwt);
-      this.setState({company})
+      this.setState({company});
+      const videocreator = jwtDecode(jwt);
+      this.setState({videocreator});
     } catch {
 
     }
@@ -35,6 +39,7 @@ class App extends Component {
           <Route path="videocreator-login" element={<VideoCreatorLogin />}/>
           <Route path="register" element={<Register />}/>
           <Route path="company-registration" element={<RegisterCompany />}/>
+          <Route path="videocreator-registration" element={<RegisterVideoCreator />}/>
         </Routes>
       </BrowserRouter>
     )
