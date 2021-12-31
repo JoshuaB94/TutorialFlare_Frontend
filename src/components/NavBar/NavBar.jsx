@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,8 +12,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'Hire a Creator', 'Register/Login'];
+const pages = [
+  <Link to="/" className="navbar-link">Home</Link>, 
+  'Hire a Creator', 
+  <Link to="/register" className="navbar-link">Register/Login</Link>
+];
+
 const settings = ['Profile', 'Profile Settings', 'Logout'];
 
 const NavBar = () => {

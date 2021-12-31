@@ -1,3 +1,10 @@
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
 
+.navbar-link:hover {
+    color: orange;
+}
 
 

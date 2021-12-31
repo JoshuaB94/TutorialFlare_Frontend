@@ -6,6 +6,7 @@ import HomePage from './components/HomePage/HomePage';
 import VideoCreatorLogin from './components/VideoCreatorLogin/VideoCreatorLogin';
 import CompanyLogin from './components/CompanyLogin/CompanyLogin';
 import Register from './components/Register/Register';
+import RegisterCompany from './components/RegisterCompany/RegisterCompany';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Route path="company-login" element={<CompanyLogin />}/>
           <Route path="videocreator-login" element={<VideoCreatorLogin />}/>
           <Route path="register" element={<Register />}/>
+          <Route path="company-registration" element={<RegisterCompany />}/>
         </Routes>
       </BrowserRouter>
     )
