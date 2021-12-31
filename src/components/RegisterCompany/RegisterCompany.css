@@ -1,0 +1,55 @@
+.company-registration-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(39, 39, 39);
+}
+
+.company-registration-form {
+    margin: auto;
+    background-color: orange;
+    width: 35%;
+    padding: 50px;
+    text-align: center;
+}
+
+.company-register-button {
+    width: 100%;
+    border-style: none;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-top: 4%;
+}
+
+.company-registration-heading {
+    text-align: center;
+    margin-bottom: 5%;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.goto-link {
+    color: black;
+}
+
+.goto-link:hover {
+    color: grey;
+}
+
+.link-wrapper {
+    margin-top: 10%;
+}
+
+input{
+    padding: 15px;
+    margin: 10px 0px;
+    width: 100%;
+}
