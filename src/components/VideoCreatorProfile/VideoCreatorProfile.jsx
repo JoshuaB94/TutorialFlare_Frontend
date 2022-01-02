@@ -29,19 +29,18 @@ const VideoCreatorProfile = () => {
                     {profile.map((vcprofile) => (
                        <div className="vc-profilecontainer" key={vcprofile._id}>
                             <div className="vc-basicinfo">
-                                <h3>{vcprofile.videoCreatorName}</h3>
-                                <p>{vcprofile.videoCreatorLocation}</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur and some gibberish for the remainder of this placeholder text area.</p>
+                                <h3>{vcprofile.Name}</h3>
+                                <p>{vcprofile.Location}</p>
                             </div>
                             <div className="vc-skills">
-                                <div>{vcprofile.videoCreatorSkill}</div>
-                                <div>Video Skill 2</div>
-                                <div>Video Skill 3</div>
+                                <div>{vcprofile.Skills.skillOne}</div>
+                                <div>{vcprofile.Skills.skillTwo}</div>
+                                <div>{vcprofile.Skills.skillThree}</div>
                             </div>
                             <div className="vc-socials">
-                                <TiSocialYoutube />
-                                <a href={vcprofile.videoCreatorSocialLink} target="_blank" rel="noopener noreferrer"><TiSocialTwitter /></a>
-                                <TiMail />
+                                <a href={vcprofile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer"><TiSocialYoutube /></a>
+                                <a href={vcprofile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer"><TiSocialTwitter /></a>
+                                <a href={`mailto:${vcprofile.SocialLinks.emailAddress}`} target="_blank" rel="noopener noreferrer"><TiMail /></a>
                             </div>
                         </div>      
                     ))}
