@@ -46,7 +46,7 @@ const VideoCreatorProfile = () => {
                     ))}
                     <div className="hire-me">
                         <button className="hire-button">Hire Me</button>
-                    </div>
+                    </div>   
                 </div>
 
                 <div className="vc-showcase">
