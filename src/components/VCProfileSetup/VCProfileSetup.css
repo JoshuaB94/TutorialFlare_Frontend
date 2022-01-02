@@ -1,20 +1,22 @@
-.vc-registration-page {
+.vc-profilesetup{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     background-color: rgb(39, 39, 39);
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-.vc-registration-form {
+.vc-profile-form {
     margin: auto;
     background-color: orange;
     width: 35%;
     padding: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.vc-register-button {
+.vc-profilesetup-button {
     width: 100%;
     border-style: none;
     background-color: black;
@@ -28,7 +30,7 @@
     margin-top: 4%;
 }
 
-.vc-registration-heading {
+.vc-profilesetup-heading {
     text-align: center;
     margin-bottom: 5%;
     color: white;
@@ -36,20 +38,9 @@
     text-transform: uppercase;
 }
 
-.goto-link {
-    color: black;
-}
-
-.goto-link:hover {
-    color: grey;
-}
-
-.link-wrapper {
-    margin-top: 10%;
-}
-
-input{
-    padding: 15px;
-    margin: 10px 0px;
-    width: 100%;
+label {
+    text-align: left;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
 }

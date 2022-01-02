@@ -11,6 +11,7 @@ import RegisterVideoCreator from './components/RegisterVideoCreator/RegisterVide
 import VideoCreatorProfile from './components/VideoCreatorProfile/VideoCreatorProfile';
 import CompanyProfile from './components/CompanyProfile/CompanyProfile';
 import HireMeForm from './components/HireMeForm/HireMeForm';
+import VCProfileSetup from './components/VCProfileSetup/VCProfileSetup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
@@ -46,6 +47,7 @@ class App extends Component {
           <Route path="videocreator/profile" element={<VideoCreatorProfile />}/>
           <Route path="company/profile" element={<CompanyProfile />}/>
           <Route path="hiremeform" element={<HireMeForm />}/>
+          <Route path="videocreator/profile-setup" element={<VCProfileSetup />}/>
         </Routes>
       </BrowserRouter>
     )
