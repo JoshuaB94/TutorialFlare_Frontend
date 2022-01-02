@@ -40,13 +40,13 @@ const VideoCreatorProfile = () => {
                             <div className="vc-socials">
                                 <a href={vcprofile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer"><TiSocialYoutube /></a>
                                 <a href={vcprofile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer"><TiSocialTwitter /></a>
-                                <a href={`mailto:${vcprofile.SocialLinks.emailAddress}`} target="_blank" rel="noopener noreferrer"><TiMail /></a>
+                                <a href={`mailto:${vcprofile.SocialLinks.emailAddress}`}><TiMail /></a>
                             </div>
                         </div>      
                     ))}
                     <div className="hire-me">
                         <button className="hire-button">Hire Me</button>
-                    </div>   
+                    </div>
                 </div>
 
                 <div className="vc-showcase">
