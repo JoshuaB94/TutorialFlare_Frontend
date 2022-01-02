@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import NavBar from '../NavBar/NavBar';
 import { Avatar } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
+import { Link } from 'react-router-dom';
 
 const VideoCreatorProfile = () => {
     const [profile, getProfile] = useState([]);
@@ -25,9 +26,9 @@ const VideoCreatorProfile = () => {
             <NavBar />
             <div className="vc-profilepage">
                 <div className="vc-profilebar">
-                    <Avatar src="/broken-image.jpg" sx={{width: 180, height: 180}} className="vc-avatar" />
                     {profile.map((vcprofile) => (
                        <div className="vc-profilecontainer" key={vcprofile._id}>
+                            <Avatar src="/broken-image.jpg" sx={{width: 180, height: 180}} className="vc-avatar" />
                             <div className="vc-basicinfo">
                                 <h3>{vcprofile.Name}</h3>
                                 <p>{vcprofile.Location}</p>
@@ -44,9 +45,9 @@ const VideoCreatorProfile = () => {
                             </div>
                         </div>      
                     ))}
-                    <div className="hire-me">
+                    <Link to="/hiremeform" className="hire-me">
                         <button className="hire-button">Hire Me</button>
-                    </div>   
+                    </Link>   
                 </div>
 
                 <div className="vc-showcase">
