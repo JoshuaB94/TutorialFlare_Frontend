@@ -41,7 +41,7 @@ class App extends Component {
           <Route path="register" element={<Register />}/>
           <Route path="company-registration" element={<RegisterCompany />}/>
           <Route path="videocreator-registration" element={<RegisterVideoCreator />}/>
-          <Route path="videocreator-profile" element={<VideoCreatorProfile />}/>
+          <Route path="videocreator/profile" element={<VideoCreatorProfile />}/>
         </Routes>
       </BrowserRouter>
     )
