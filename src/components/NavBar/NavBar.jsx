@@ -17,7 +17,6 @@ import Logout from '../Logout/Logout';
 
 const pages = [
   <Link to="/" className="navbar-link">Home</Link>, 
-  'Hire a Creator', 
   <Link to="/login" className="navbar-link">Login/Register</Link>
 ];
 

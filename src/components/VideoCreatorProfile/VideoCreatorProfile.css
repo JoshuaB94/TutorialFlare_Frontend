@@ -1,4 +1,5 @@
 .vc-profilepage {
     height: 100vh;
     padding: 8%;
+    display: flex;
 }
