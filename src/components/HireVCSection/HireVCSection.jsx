@@ -13,9 +13,6 @@ const HireVCSection = () => {
             {/* Filter Dropdown would go here. Might consider creating a Filter Dropdown component */}
             <div className="vc-hiring-cards">
                 <VideoCreatorCard />
-                <VideoCreatorCard />
-                <VideoCreatorCard />
-                <VideoCreatorCard />
             </div>
         </Container>
     );

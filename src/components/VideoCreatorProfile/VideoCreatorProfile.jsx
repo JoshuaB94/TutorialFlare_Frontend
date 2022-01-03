@@ -1,7 +1,6 @@
 import './VideoCreatorProfile.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import NavBar from '../NavBar/NavBar';
 import { Avatar } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
@@ -23,7 +22,6 @@ const VideoCreatorProfile = () => {
 
     return ( 
         <div>
-            <NavBar />
             <div className="vc-profilepage">
                 <div className="vc-profilebar">
                     {profile.map((vcprofile) => (

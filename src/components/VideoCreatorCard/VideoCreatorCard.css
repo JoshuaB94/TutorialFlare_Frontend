@@ -1,10 +1,11 @@
 .vc-profile-card {
     text-align: center;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-bottom: 1%;
     padding-left: 1%;
     padding-right: 1%;
     width: 280px;
+    margin-bottom: 2%;
 }
 
 .card-avatar {
@@ -13,4 +14,14 @@
 
 .profile-button {
     width: 100%;
+}
+
+.profile-button:hover {
+    color: white;
+}
+
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

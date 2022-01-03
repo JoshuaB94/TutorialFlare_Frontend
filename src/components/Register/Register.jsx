@@ -1,11 +1,9 @@
 import './Register.css';
 import { Link } from 'react-router-dom';
-import NavBar from '../NavBar/NavBar';
 
 const Register = () => {    
     return ( 
         <div>
-            <NavBar />
             <div className="registration-page">
                 <div className="registration-selection">
                     <h1>Register as a...</h1>

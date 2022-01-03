@@ -1,5 +1,4 @@
 import './CompanyProfile.css';
-import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -20,7 +19,6 @@ const CompanyProfile = () => {
 
     return ( 
         <div>
-            <NavBar />
             <div className="company-profilepage">
                 {profile.map((companyprofile) => (
                     <div className="company-profileinfo" key={companyprofile._id}>
