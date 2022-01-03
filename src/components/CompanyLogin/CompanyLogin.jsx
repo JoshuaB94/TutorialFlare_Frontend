@@ -22,7 +22,7 @@ const CompanyLogin = () => {
         if (response.status === 200) {
             console.log(response.data);
             localStorage.setItem('token', response.data)
-            window.location ='/';
+            window.location ='/company/profile-setup';
         };
 
         if (response.status === 400) {

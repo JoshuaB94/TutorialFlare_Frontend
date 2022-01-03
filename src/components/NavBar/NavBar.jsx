@@ -22,8 +22,8 @@ const pages = [
 ];
 
 const settings = [
-  'Profile', 
-  'Profile Settings',
+  <Link to="/videocreator/profile" className="profilemenu-link">Profile</Link>, 
+  <Link to="/videocreator/profile-setup" className="profilemenu-link">Profile Settings</Link>,
   <Logout />
 ];
 

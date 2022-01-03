@@ -19,7 +19,7 @@ const VideoCreatorLogin = () => {
         if (response.status === 200) {
             console.log(response.data);
             localStorage.setItem('token', response.data)
-            window.location ='/';
+            window.location ='/videocreator/profile-setup';
         };
 
         if (response.status === 400) {
