@@ -41,11 +41,11 @@ const VideoCreatorProfile = () => {
                                 <a href={vcprofile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer"><TiSocialTwitter /></a>
                                 <a href={`mailto:${vcprofile.SocialLinks.emailAddress}`}><TiMail /></a>
                             </div>
-                        </div>      
+                            <Link to="/hiremeform" className="hire-me">
+                                <button className="hire-button">Hire Me</button>
+                            </Link> 
+                        </div>  
                     ))}
-                    <Link to="/hiremeform" className="hire-me">
-                        <button className="hire-button">Hire Me</button>
-                    </Link>   
                 </div>
 
                 <div className="vc-showcase">
