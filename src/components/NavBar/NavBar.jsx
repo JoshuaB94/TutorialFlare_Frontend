@@ -17,6 +17,7 @@ import Logout from '../Logout/Logout';
 
 const pages = [
   <Link to="/" className="navbar-link">Home</Link>, 
+  <Link to="/client-portal" className="navbar-link">Client Portal</Link>,
   <Link to="/login" className="navbar-link">Login/Register</Link>
 ];
 
