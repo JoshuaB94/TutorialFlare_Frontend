@@ -15,7 +15,7 @@ const RegisterVideoCreator = () => {
             name: name,
             email: email,
             password: password,
-            isAdmin: true
+            isCreator: true
         }
 
         let response = await axios.post(`http://localhost:3200/api/video-creator/register`, postVideoCreator);

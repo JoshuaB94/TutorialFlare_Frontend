@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Login from './components/Login/Login';
 import HomePage from './components/HomePage/HomePage';
@@ -17,25 +17,18 @@ import ClientPortal from './components/ClientPortal/ClientPortal';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
-class App extends Component {
-  state =  {
-    company: "",
-    videocreator: ""
-  }
+const App = () => {
+    const [user, setUser] = useState(null);
 
-  componentDidMount() {
-    const jwt = localStorage.getItem('token');
-    try {
-      const company = jwtDecode(jwt);
-      this.setState({company});
-      const videocreator = jwtDecode(jwt);
-      this.setState({videocreator});
-    } catch {
+    useEffect(() => {
+      const jwt = localStorage.getItem('token');
+        try {
+          setUser(jwtDecode(jwt));
+        } catch (error) {
+          console.log(error);
+        }
+    }, [])
 
-    }
-  }
-
-  render() {
     return (
       <BrowserRouter> 
         <NavBar />
@@ -55,8 +48,7 @@ class App extends Component {
           <Route path="client-portal" element={<ClientPortal />}/>
         </Routes>
       </BrowserRouter>
-    )
-  }
+    );
 }
 
 export default App;

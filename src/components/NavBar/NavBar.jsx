@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -27,7 +27,7 @@ const settings = [
   <Logout />
 ];
 
-const NavBar = () => {
+const NavBar = ({setUser}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -45,6 +45,8 @@ const NavBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  // useEffect(() => {}, [user])
 
   return (
     <AppBar position="static">
