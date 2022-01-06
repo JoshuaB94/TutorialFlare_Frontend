@@ -40,7 +40,7 @@ const App = () => {
           <Route path="register" element={<Register />}/>
           <Route path="company-registration" element={<RegisterCompany />}/>
           <Route path="videocreator-registration" element={<RegisterVideoCreator />}/>
-          <Route path="videocreator/profile" element={<VideoCreatorProfile />}/>
+          <Route path="videocreator/profile" element={<VideoCreatorProfile {...user} isCreator={true}/>}/>
           <Route path="company/profile" element={<CompanyProfile />}/>
           <Route path="hiremeform" element={<HireMeForm />}/>
           <Route path="videocreator/profile-setup" element={<VCProfileSetup />}/>
