@@ -19,8 +19,15 @@
 }
 
 .vc-hiring-cards {
-    margin-top: 5%;
+    margin-top: 3%;
     max-width: 100%;
 }
 
-
+.vc-dropdown-filter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3%;
+  }

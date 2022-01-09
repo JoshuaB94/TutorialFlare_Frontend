@@ -1,10 +1,11 @@
 import './VideoCreatorProfile.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Avatar } from '@mui/material';
+import { Avatar, Rating } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import UserRating from '../RateUser/RateUser';
 // import apiKey from '../apiKey'
 
 const VideoCreatorProfile = () => {
@@ -65,6 +66,10 @@ const VideoCreatorProfile = () => {
                                 <button className="hire-button">Hire Me</button>
                             </Link> 
                         </div>  
+
+                        <div>
+                            <UserRating />
+                        </div>
 
                         <div className="vc-showcase">
                             <h3>My Latest Video Tutorials</h3>

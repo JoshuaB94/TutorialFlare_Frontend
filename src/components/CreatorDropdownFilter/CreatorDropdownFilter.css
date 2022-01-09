@@ -1,0 +1,18 @@
+.skill-filter {
+    text-align: center;
+    width: 300px;
+    background-color: orange;
+    border-style: none;
+    color: black;
+    padding-top: 13px;
+    padding-bottom: 10px;
+  }
+  
+  .skill-filter:hover {
+    background-color: red;
+  }
+
+  .dropdown-filter-menu {
+    text-align: center;
+    width: 300px;
+  }
