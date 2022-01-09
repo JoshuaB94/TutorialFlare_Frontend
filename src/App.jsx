@@ -41,10 +41,10 @@ const App = () => {
           <Route path="company-registration" element={<RegisterCompany />}/>
           <Route path="videocreator-registration" element={<RegisterVideoCreator />}/>
           <Route path="videocreator/profile" element={<VideoCreatorProfile {...user} isCreator={true}/>}/>
-          <Route path="company/profile" element={<CompanyProfile />}/>
+          <Route path="company/profile" element={<CompanyProfile {...user} isCompany={true}/>}/>
           <Route path="hiremeform" element={<HireMeForm />}/>
-          <Route path="videocreator/profile-setup" element={<VCProfileSetup />}/>
-          <Route path="company/profile-setup" element={<CoProfileSetup />}/>
+          <Route path="videocreator/profile-setup" element={<VCProfileSetup isCreator={true}/>}/>
+          <Route path="company/profile-setup" element={<CoProfileSetup isCompany={true}/>}/>
           <Route path="client-portal" element={<ClientPortal />}/>
         </Routes>
       </BrowserRouter>

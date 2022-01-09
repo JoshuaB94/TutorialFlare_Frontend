@@ -7,6 +7,7 @@ const CoProfileSetup = () => {
     const [Mission, setupMission] = useState("");
     const [Bio, setupBio] = useState("");
     const [Website, setupWebsite] = useState("");
+    const [Image, setupImage] = useState("");
     
     async function handleSubmit(e){
         e.preventDefault();
@@ -15,7 +16,8 @@ const CoProfileSetup = () => {
             CompanyName: CompanyName,
             Mission: Mission,
             Bio: Bio, 
-            Website: Website
+            Website: Website, 
+            Image: Image
         }
 
         let response = await axios.post(`http://localhost:3200/api/company/profile-setup`, postCompanyProfile);
@@ -41,6 +43,8 @@ const CoProfileSetup = () => {
                     <textarea placeholder="Enter your Company's Bio (Max Length: 1500 Characters)" type="text" rows="6" cols="100" value={Bio} onChange={(e) => setupBio(e.target.value)}/>
                 <label>Company Website</label>
                     <input placeholder="Enter your Company's Website" type="text" value={Website} onChange={(e) => setupWebsite(e.target.value)}/>
+                <label for="imagefile">Select an image:</label>
+                    <input type="file" id="imagefile" value={Image} onChange={(e) => setupImage(e.target.value)}/>
                 <button className="company-profilesetup-button" type="submit">Create Profile</button>
             </form>
         </div>

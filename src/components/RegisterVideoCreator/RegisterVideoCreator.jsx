@@ -7,6 +7,7 @@ const RegisterVideoCreator = () => {
     const [name, registerName] = useState("");
     const [email, registerEmail] = useState("");
     const [password, registerPassword] = useState("");
+    const [image, registerImage] = useState("");
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -15,7 +16,8 @@ const RegisterVideoCreator = () => {
             name: name,
             email: email,
             password: password,
-            isCreator: true
+            isCreator: true,
+            image: image
         }
 
         let response = await axios.post(`http://localhost:3200/api/video-creator/register`, postVideoCreator);
@@ -36,6 +38,8 @@ const RegisterVideoCreator = () => {
                 <input placeholder="Full Name" type="text" value={name} onChange={(e) => registerName(e.target.value)}/>
                 <input placeholder="Email Address" type="text" value={email} onChange={(e) => registerEmail(e.target.value)}/>
                 <input placeholder="Enter a Password" type="text" value={password} onChange={(e) => registerPassword(e.target.value)}/>
+                <label for="imagefile">Select an image:</label>
+                <input type="file" id="imagefile" value={image} onChange={(e) => registerImage(e.target.value)}/>
                 <button className="vc-register-button" type="submit">Register</button>
                 <div className="link-wrapper">
                     <Link to="/videocreator-login" className="goto-link">Already have an account? Click to login.</Link>

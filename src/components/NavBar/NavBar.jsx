@@ -27,7 +27,7 @@ const settings = [
   <Logout />
 ];
 
-const NavBar = ({setUser}) => {
+const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -45,8 +45,6 @@ const NavBar = ({setUser}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
-  // useEffect(() => {}, [user])
 
   return (
     <AppBar position="static">

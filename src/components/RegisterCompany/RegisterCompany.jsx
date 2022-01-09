@@ -7,6 +7,7 @@ const RegisterCompany = () => {
     const [company, registerCompany] = useState("");
     const [email, registerEmail] = useState("");
     const [password, registerPassword] = useState("");
+    const [image, registerImage] = useState("");
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -15,7 +16,8 @@ const RegisterCompany = () => {
             company: company,
             email: email,
             password: password,
-            isAdmin: true
+            isCompany: true,
+            image: image
         }
 
         let response = await axios.post(`http://localhost:3200/api/company/register`, postCompany);
@@ -36,6 +38,8 @@ const RegisterCompany = () => {
                 <input placeholder="Your Company Name" type="text" value={company} onChange={(e) => registerCompany(e.target.value)}/>
                 <input placeholder="Email Address" type="text" value={email} onChange={(e) => registerEmail(e.target.value)}/>
                 <input placeholder="Enter a Password" type="text" value={password} onChange={(e) => registerPassword(e.target.value)}/>
+                <label for="imagefile">Select an image:</label>
+                <input type="file" id="imagefile" value={image} onChange={(e) => registerImage(e.target.value)}/>
                 <button className="company-register-button" type="submit">Register</button>
                 <div className="link-wrapper">
                     <Link to="/company-login" className="goto-link">Already have an account? Click to login.</Link>
