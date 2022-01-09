@@ -4,9 +4,12 @@ import { useState, useEffect } from 'react';
 import { Avatar } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
+// import apiKey from '../apiKey'
 
 const VideoCreatorProfile = () => {
     const [profile, setProfile] = useState("");
+    // const [videoPlaylist, setVideoPlaylist] = useState([]);
 
     useEffect(() => {
         axios
@@ -20,12 +23,26 @@ const VideoCreatorProfile = () => {
         })
     }, []);
 
+//    useEffect(() => {
+//         axios
+//         .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLAEcJNQ_UtvT2j3j7uPtgmtorvFjJQPZ6&key=${apiKey}&maxResults=3`)
+//         .then(res => {
+//             console.log(res)
+//             setVideoPlaylist(res.data)
+//         })
+//         .catch(err => {
+//             console.log(err)
+//         })
+//     }, []);
+
+     
+
     return ( 
         <div>
             <div className="vc-profilepage">
 
                 {profile &&
-                    <div className="vc-profilebar">
+                    <div className="vc-profilearea">
                         <div className="vc-profilecontainer">
                             <Avatar src="/broken-image.jpg" sx={{width: 180, height: 180}} className="vc-avatar" />
                             <div className="vc-basicinfo">
@@ -48,15 +65,20 @@ const VideoCreatorProfile = () => {
                                 <button className="hire-button">Hire Me</button>
                             </Link> 
                         </div>  
-                    </div>
-                }
 
-                <div className="vc-showcase">
-                    <h3>My Latest Video Tutorials</h3>
-                    <div className="vc-videos">
-                        <p>This is where the videos will live!</p>
+                        <div className="vc-showcase">
+                            <h3>My Latest Video Tutorials</h3>
+                            <div className="vc-videos">
+                                <ul>
+                                    <li><ReactPlayer url='https://youtu.be/8YWrmZoUYGs' /></li>
+                                    <li><ReactPlayer url='https://youtu.be/DYtYyFOfpBY' /></li>
+                                    <li><ReactPlayer url='https://youtu.be/JKOwJUM4_RM' /></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    
+                }
 
             </div>
         </div>

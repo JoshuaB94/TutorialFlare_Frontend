@@ -42,7 +42,7 @@ const App = () => {
           <Route path="videocreator-registration" element={<RegisterVideoCreator />}/>
           <Route path="videocreator/profile" element={<VideoCreatorProfile {...user} isCreator={true}/>}/>
           <Route path="company/profile" element={<CompanyProfile {...user} isCompany={true}/>}/>
-          <Route path="hiremeform" element={<HireMeForm />}/>
+          <Route path="hiremeform" element={<HireMeForm isCompany={true}/>}/>
           <Route path="videocreator/profile-setup" element={<VCProfileSetup isCreator={true}/>}/>
           <Route path="company/profile-setup" element={<CoProfileSetup isCompany={true}/>}/>
           <Route path="client-portal" element={<ClientPortal />}/>

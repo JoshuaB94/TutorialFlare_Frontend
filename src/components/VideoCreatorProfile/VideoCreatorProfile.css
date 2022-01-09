@@ -3,3 +3,7 @@
     padding: 8%;
     display: flex;
 }
+
+ul li {
+    list-style-type: none;
+}
