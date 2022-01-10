@@ -1,5 +1,4 @@
 .registration-page {
-    background-color: rgb(39, 39, 39);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -7,14 +6,18 @@
 }
 
 .registration-selection {
-    background-color: orange;
     padding: 50px;
     text-align: center;
     width: 35%;
+
+    /*Box Shadow*/
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1); 
+      -webkit-box-shadow: 0 6px 22px rgba(0, 0, 0,0.1); 
+      -moz-box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: white;
+.registration-slection h1 {
+    color: #1c1c1c;
     margin-bottom: 4%;
 }
 
@@ -33,7 +36,7 @@ h1 {
 }
 
 .register-button:hover {
-    background-color: rgb(218, 88, 88);
+    background-color: #649B92;
 }
 
 .button-link {

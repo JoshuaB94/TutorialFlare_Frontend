@@ -2,16 +2,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    background-color: rgb(39, 39, 39);
+    height: 100vh;
 }
 
 .vc-registration-form {
     margin: auto;
-    background-color: orange;
     width: 35%;
     padding: 50px;
     text-align: center;
+    border-radius: 20px;
+
+    /*Box Shadow*/
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1); 
+      -webkit-box-shadow: 0 6px 22px rgba(0, 0, 0,0.1); 
+      -moz-box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
 }
 
 .vc-register-button {
@@ -28,10 +32,14 @@
     margin-top: 4%;
 }
 
+.vc-register-button:hover {
+    background-color: #649B92;
+}
+
 .vc-registration-heading {
     text-align: center;
     margin-bottom: 5%;
-    color: white;
+    color: #1c1c1c;
     font-weight: 600;
     text-transform: uppercase;
 }

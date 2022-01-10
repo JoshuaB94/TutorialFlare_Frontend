@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Rating, Box, Typography } from '@mui/material';
+import { Rating, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 
 const labels = {
@@ -16,17 +16,17 @@ const labels = {
   };
 
 const UserRating = () => {
-    const [value, setValue] = useState(2);
+    const [value, setValue] = useState(4);
     const [hover, setHover] = useState(-1);
 
     return ( 
-        <Box
-      sx={{
-        width: 200,
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
+      <Box
+        sx={{
+          width: 200,
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
       <Rating
         name="hover-feedback"
         value={value}
@@ -37,10 +37,9 @@ const UserRating = () => {
         onChangeActive={(event, newHover) => {
           setHover(newHover);
         }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />} size='large'/>
-      {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-      )}
+        icon={<StarIcon fontSize="inherit" highlightSelectedOnly="true"/>} className="star-icons iconEmpty" size='large'/>
+
+        {value !== null && (<Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>)}
     </Box>
      );
 }

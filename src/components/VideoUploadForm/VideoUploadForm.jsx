@@ -27,7 +27,7 @@ const VideoUploadForm = () => {
 
 
     return ( 
-        <form className="upload-form" action="/:_id/upload" method="post" encType="multipart/data-form" onSubmit={handleSubmit}>
+        <form className="upload-form" encType="multipart/data-form" onSubmit={handleSubmit}>
             <input placeholder="Video Title" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
             <label htmlFor="videofile">Upload a Video</label>
             <input type="file" id="videofile" accept=".mp4, .mov" name="video" value={video} onChange={(e) => setVideo(e.target.value)}/>

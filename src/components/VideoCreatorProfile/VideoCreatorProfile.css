@@ -1,9 +1,147 @@
+/*Main page container*/
 .vc-profilepage {
-    height: 100vh;
-    padding: 8%;
+    height: 100%;
+    padding: 5%;
+    width: 100%;
+  }
+  
+  .vc-profilearea {
     display: flex;
-}
+    align-items: flex-start;
+  }
+  
+  .vc-profilecontainer {
+    background-color: white;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-radius: 25px;
+    text-align: center;
+    
+    /*Box Shadow*/
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1); 
+      -webkit-box-shadow: 0 6px 22px rgba(0, 0, 0,0.1); 
+      -moz-box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  }
+  
+  /*Profile Bar*/
+  .vc-avatar {
+    margin-bottom: 8%;
+  }
+  
+  .vc-basicinfo {
+    color: #1c1c1c;
+    margin-bottom: 4%;
+  }
+  
+  .vc-basicinfo h3 {
+    font-weight: 800;
+    color: #1c1c1c;
+  }
+  
+  .vc-skill {
+    background-color: #1c1c1c;
+    margin-bottom: 10%;
+    color: white;
+    padding: 15px 30px 15px 30px;
+    border-radius: 30px;
+  }
+  
+  .vc-socials {
+    font-size: 35px;
+    width: 50%;
+    padding-bottom: 3%;
+  }
+  
+  .social-icon {
+    color: #FFD12E;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  .social-icon:hover {
+    color: #006B61;
+  }
+  
+  .hire-me {
+    width: 75%;
+    margin-top: 5%;
+  }
+  
+  .hire-button {
+    background-color: #006B61;
+    border-style: none;
+    padding: 15px 30px 15px 30px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  .hire-button:hover {
+    background-color: #649B92;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+  }
+  
+  /*Rating Bar*/
+  .rating-bar {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    color: #1c1c1c;
+  }
+  
+  .star-icons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .MuiRating-iconEmpty {
+    color: white;
+  }
+  
+  .MuiRating-iconHover {
+    color: #FFD12E;
+  }
+  
+  .MuiRating-iconFilled {
+    color: #FFD12E;
+  }
+  
 
-ul li {
-    list-style-type: none;
-}
+  .vc-showcase {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vc-videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 4%;
+    margin-top: 1%;
+  }
+  
+  .submitted-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1%;
+  }
+  
+  h3 {
+    color: #649b92a1;
+    font-weight: 600;
+    text-transform: uppercase;
+  }

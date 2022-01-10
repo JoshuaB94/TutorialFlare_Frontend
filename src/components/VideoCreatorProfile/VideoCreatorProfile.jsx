@@ -1,7 +1,7 @@
 import './VideoCreatorProfile.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Avatar, Rating } from '@mui/material';
+import { Avatar } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
@@ -36,6 +36,8 @@ const VideoCreatorProfile = () => {
 //         })
 //     }, []);
 
+    
+
      
 
     return ( 
@@ -45,40 +47,50 @@ const VideoCreatorProfile = () => {
                 {profile &&
                     <div className="vc-profilearea">
                         <div className="vc-profilecontainer">
-                            <Avatar src="/broken-image.jpg" sx={{width: 180, height: 180}} className="vc-avatar" />
+                            <Avatar src={'http://localhost:3200/uploads/images/83490e30-6e43-11ec-bd87-57a16778a9a8.jpeg'} sx={{width: 180, height: 180}} className="vc-avatar" />
                             <div className="vc-basicinfo">
                                 <h3>{profile.Name}</h3>
                                 <p>{profile.Location}</p>
                             </div>
             
                             <div className="vc-skills">
-                                <div>{profile.Skills.skillOne}</div>
-                                <div>{profile.Skills.skillTwo}</div>
-                                <div>{profile.Skills.skillThree}</div>
+                                <div className="vc-skill">{profile.Skills.skillOne}</div>
+                                <div className="vc-skill">{profile.Skills.skillTwo}</div>
+                                <div className="vc-skill">{profile.Skills.skillThree}</div>
                             </div>
 
                             <div className="vc-socials">
-                                <a href={profile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer"><TiSocialYoutube /></a>
-                                <a href={profile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer"><TiSocialTwitter /></a>
-                                <a href={`mailto:${profile.SocialLinks.emailAddress}`}><TiMail /></a>
+                                <a href={profile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer" className="social-icon"><TiSocialYoutube /></a>
+                                <a href={profile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer" className="social-icon"><TiSocialTwitter /></a>
+                                <a href={`mailto:${profile.SocialLinks.emailAddress}`} className="social-icon"><TiMail /></a>
                             </div>
                             <Link to="/hiremeform" className="hire-me">
                                 <button className="hire-button">Hire Me</button>
                             </Link> 
-                        </div>  
-
-                        <div>
+                            <div className="rating-bar">
                             <UserRating />
-                        </div>
+                            </div>
+                        </div>  
 
                         <div className="vc-showcase">
                             <h3>My Latest Video Tutorials</h3>
                             <div className="vc-videos">
-                                <ul>
-                                    <li><ReactPlayer url='https://youtu.be/8YWrmZoUYGs' /></li>
-                                    <li><ReactPlayer url='https://youtu.be/DYtYyFOfpBY' /></li>
-                                    <li><ReactPlayer url='https://youtu.be/JKOwJUM4_RM' /></li>
-                                </ul>
+                                <ReactPlayer url='https://youtu.be/8YWrmZoUYGs' width="420px" height="320px"/>
+                                <ReactPlayer url='https://youtu.be/DYtYyFOfpBY' width="420px" height="320px"/>
+                                <ReactPlayer url='https://youtu.be/JKOwJUM4_RM' width="420px" height="320px"/>
+                            </div>
+
+                            <h3>My Submissions</h3>
+                            <div className="submitted-projects">   
+                                <ReactPlayer 
+                                url='http://localhost:3200/uploads/videos/045fa1f0-7227-11ec-805c-b91f9fa41333.mp4'
+                                controls='true' width="420px" height="320px"/>
+                                <ReactPlayer 
+                                url='http://localhost:3200/uploads/videos/c4025590-7220-11ec-96c8-55aa5856392d.mp4'
+                                controls='true' width="420px" height="320px"/>
+                                <ReactPlayer 
+                                url='http://localhost:3200/uploads/videos/da69ced0-7220-11ec-96c8-55aa5856392d.mp4'
+                                controls='true' width="420px" height="320px"/>
                             </div>
                         </div>
                     </div>

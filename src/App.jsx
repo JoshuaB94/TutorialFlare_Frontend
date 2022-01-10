@@ -46,7 +46,7 @@ const App = () => {
           <Route path="hiremeform" element={<HireMeForm isCompany={true}/>}/>
           <Route path="videocreator/profile-setup" element={<VCProfileSetup isCreator={true}/>}/>
           <Route path="company/profile-setup" element={<CoProfileSetup isCompany={true}/>}/>
-          <Route path="videocreator/upload" element={<VideoUploadForm {...user} isCreator={true}/>}/>
+          <Route path="videocreator/upload" element={<VideoUploadForm {...user}/>}/>
           <Route path="client-portal" element={<ClientPortal />}/>
         </Routes>
       </BrowserRouter>
