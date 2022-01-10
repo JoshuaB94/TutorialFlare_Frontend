@@ -20,7 +20,7 @@ const CoProfileSetup = () => {
             Image: Image
         }
 
-        let response = await axios.post(`http://localhost:3200/api/company/profile-setup`, postCompanyProfile);
+        let response = await axios.post(`http://localhost:3200/api/company/61dc30389d5f398b275a14e4/profile-setup`, postCompanyProfile);
         if (response.status === 200) {
             console.log(response.data);
             window.location = '/company/profile'
@@ -33,7 +33,7 @@ const CoProfileSetup = () => {
     
     return (  
         <div className="company-profilesetup">
-            <form className="company-profile-form" onSubmit={handleSubmit}>
+            <form className="company-profile-form" onSubmit={handleSubmit} encType="multipart/form-data">
                 <h1 className="company-profilesetup-heading">Setup Company Profile</h1>
                 <label>Company Name</label>
                     <input placeholder="Your Company Name LLC" type="text" value={CompanyName} onChange={(e) => setupCompanyName(e.target.value)}/>
@@ -44,7 +44,7 @@ const CoProfileSetup = () => {
                 <label>Company Website</label>
                     <input placeholder="Enter your Company's Website" type="text" value={Website} onChange={(e) => setupWebsite(e.target.value)}/>
                 <label for="imagefile">Select an image:</label>
-                    <input type="file" id="imagefile" value={Image} onChange={(e) => setupImage(e.target.value)}/>
+                    <input type="file" id="imagefile" value={Image} name="Image" onChange={(e) => setupImage(e.target.value)}/>
                 <button className="company-profilesetup-button" type="submit">Create Profile</button>
             </form>
         </div>

@@ -14,6 +14,7 @@ import HireMeForm from './components/HireMeForm/HireMeForm';
 import VCProfileSetup from './components/VCProfileSetup/VCProfileSetup';
 import CoProfileSetup from './components/CoProfileSetup/CoProfileSetup';
 import ClientPortal from './components/ClientPortal/ClientPortal';
+import VideoUploadForm from './components/VideoUploadForm/VideoUploadForm';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="hiremeform" element={<HireMeForm isCompany={true}/>}/>
           <Route path="videocreator/profile-setup" element={<VCProfileSetup isCreator={true}/>}/>
           <Route path="company/profile-setup" element={<CoProfileSetup isCompany={true}/>}/>
+          <Route path="videocreator/upload" element={<VideoUploadForm {...user} isCreator={true}/>}/>
           <Route path="client-portal" element={<ClientPortal />}/>
         </Routes>
       </BrowserRouter>

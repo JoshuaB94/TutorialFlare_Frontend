@@ -33,13 +33,13 @@ const RegisterCompany = () => {
 
     return ( 
         <div className="company-registration-page">
-            <form className="company-registration-form" onSubmit={handleSubmit}>
+            <form className="company-registration-form" onSubmit={handleSubmit} encType='multipart/form-data'>
                 <h1 className="company-registration-heading">Register as a Company</h1>
                 <input placeholder="Your Company Name" type="text" value={company} onChange={(e) => registerCompany(e.target.value)}/>
                 <input placeholder="Email Address" type="text" value={email} onChange={(e) => registerEmail(e.target.value)}/>
                 <input placeholder="Enter a Password" type="text" value={password} onChange={(e) => registerPassword(e.target.value)}/>
                 <label for="imagefile">Select an image:</label>
-                <input type="file" id="imagefile" value={image} onChange={(e) => registerImage(e.target.value)}/>
+                <input type="file" id="imagefile" value={image} name="image" onChange={(e) => registerImage(e.target.value)}/>
                 <button className="company-register-button" type="submit">Register</button>
                 <div className="link-wrapper">
                     <Link to="/company-login" className="goto-link">Already have an account? Click to login.</Link>

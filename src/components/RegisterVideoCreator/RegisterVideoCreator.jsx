@@ -33,7 +33,7 @@ const RegisterVideoCreator = () => {
 
     return ( 
         <div className="vc-registration-page">
-            <form className="vc-registration-form" onSubmit={handleSubmit}>
+            <form className="vc-registration-form" onSubmit={handleSubmit} enctype="multipart/form-data">
                 <h1 className="vc-registration-heading">Register as a Video Creator</h1>
                 <input placeholder="Full Name" type="text" value={name} onChange={(e) => registerName(e.target.value)}/>
                 <input placeholder="Email Address" type="text" value={email} onChange={(e) => registerEmail(e.target.value)}/>

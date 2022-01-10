@@ -41,7 +41,7 @@ const VCProfileSetup = () => {
 
     return ( 
         <div className="vc-profilesetup">
-            <form className="vc-profile-form" onSubmit={handleSubmit}>
+            <form className="vc-profile-form" onSubmit={handleSubmit} encType="multipart/form-data">
                 <h1 className="vc-profilesetup-heading">Setup Video Creator Profile</h1>
                 <label>What is your name?</label>
                     <input placeholder="John Doe" type="text" value={Name} onChange={(e) => setupName(e.target.value)}/>
@@ -56,7 +56,7 @@ const VCProfileSetup = () => {
                     <input placeholder="Enter your Twitter link" type="text" value={Twitter} onChange={(e) => setupTwitter(e.target.value)}/>
                     <input placeholder="Enter your best Email Address" type="text" value={emailAddress} onChange={(e) => setupEmailAddress(e.target.value)}/>
                 <label for="imagefile">Select an image:</label>
-                    <input type="file" id="imagefile" value={Image} onChange={(e) => setupImage(e.target.value)}/>
+                    <input type="file" id="imagefile" value={Image} name="Image" onChange={(e) => setupImage(e.target.value)}/>
                 <button className="vc-profilesetup-button" type="submit">Create Profile</button>
             </form>
         </div>
