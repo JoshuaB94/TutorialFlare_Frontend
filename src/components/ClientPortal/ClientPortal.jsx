@@ -1,7 +1,6 @@
 import './ClientPortal.css';
-import { useState } from 'react';
-import NavBar from '../NavBar/NavBar';
-import { ChatEngine, getOrCreateChat } from 'react-chat-engine';
+import React, { useState } from 'react';
+import { ChatEngine, ChatList, ChatCard, NewChatForm, ChatFeed, ChatHeader, IceBreaker, MessageBubble, IsTyping, ConnectionBar, NewMessageForm, ChatSettings, ChatSettingsTop, PeopleSettings, PhotosSettings, OptionsSettings, getOrCreateChat} from 'react-chat-engine';
 
 const ClientPortal = () => {
     const [username, setUsername] = useState("");
@@ -24,13 +23,28 @@ const ClientPortal = () => {
     }
 
     return ( 
-        <NavBar />,
         <ChatEngine 
+            width="100%"
             height="100vh"
             projectID="e165ae9d-3188-4d54-8f9b-df7008e891c3"
-            userName="JoshuaBerrios"
-            userSecret="Nikon-1994"
-            renderNewChatForm={(creds) => renderChatForm(creds)}
+            userName="CreatorOne"
+            userSecret="creatorone@snailmail.com"
+
+            renderChatList={(chatAppState) => <ChatList {...chatAppState} />}
+            renderChatCard={(chat, index) => <ChatCard key={`${index}`} chat={chat} />}
+            renderNewChatForm={(creds) => <NewChatForm creds={creds} />} 
+            renderChatFeed={(chatAppState) => <ChatFeed {...chatAppState} />}
+            renderChatHeader={(chat) => <ChatHeader />}
+            renderIceBreaker={(chat) => <IceBreaker />}
+            renderMessageBubble={(creds, chat, lastMessage, message, nextMessage) => <MessageBubble lastMessage={lastMessage} message={message} nextMessage={nextMessage} chat={chat} />}
+            renderIsTyping={(typers) => <IsTyping />}
+            renderConnectionBar={(chat) => <ConnectionBar />}
+            renderNewMessageForm={(creds, chatID) => <NewMessageForm />}
+            renderChatSettings={(chatAppState) => <ChatSettings {...chatAppState} />}
+            renderChatSettingsTop={(creds, chat) => <ChatSettingsTop />}
+            renderPeopleSettings={(creds, chat) => <PeopleSettings />}
+            renderPhotosSettings={(chat) => <PhotosSettings />}
+            renderOptionsSettings={(creds, chat) => <OptionsSettings />}
         />
      );
 }

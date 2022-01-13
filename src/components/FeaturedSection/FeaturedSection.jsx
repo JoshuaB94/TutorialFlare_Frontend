@@ -15,7 +15,7 @@ const FeaturedSection = () => {
                     <Button variant="contained" disableElevation size="large">Clicky Button</Button>
                 </Grid>
                 <Grid className="featured-creator-image" md={4}>
-                    <Avatar src="/broken-image.jpg" sx={{width: 320, height: 320}} />
+                    <Avatar src={'http://localhost:3200/uploads/images/c1932b50-7215-11ec-b86c-5dc1a6ae4206.jpeg'} sx={{width: 320, height: 320}} />
                 </Grid>
             </Grid>
         </Container>

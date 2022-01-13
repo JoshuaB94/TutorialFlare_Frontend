@@ -66,16 +66,12 @@
     color: #006B61;
   }
   
-  .hire-me {
-    width: 75%;
-    margin-top: 5%;
-  }
-  
   .hire-button {
     background-color: #006B61;
     border-style: none;
     padding: 15px 30px 15px 30px;
-    width: 100%;
+    width: 75%;
+    margin-top: 5%;
     border-radius: 8px;
     font-size: 20px;
     font-weight: 900;
@@ -143,5 +139,35 @@
   h3 {
     color: #649b92a1;
     font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .modal-close {
+    font-size: 40px;
+    color: white;
+  }
+
+  .modal-close:hover {
+    color: #1c1c1c;
+  }
+
+  .modal-close-button {
+    text-align: right;
+  }
+
+  .hire-me-modal {
+    width: 50%;
+    background-color: #649B92;
+    padding: 30px 50px 80px 50px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    top: 15%;
+    margin: auto;
+  }
+  
+  .hire-me-modal h2 {
+    margin-top: 1%;
     text-transform: uppercase;
   }

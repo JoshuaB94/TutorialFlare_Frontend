@@ -30,7 +30,7 @@ const VideoCreatorCard = () => {
     <div className="profile-cards">
       {profile.map((creatorprofile) => (
       <Card sx={{ maxWidth: 350 }} className="vc-profile-card" key={creatorprofile._id}>
-          <Avatar src="/broken-image.jpg" sx={{width: 90, height: 90}} className="card-avatar"/>
+          <Avatar src={creatorprofile.Image} sx={{width: 90, height: 90}} className="card-avatar"/>
           <CardContent>
             <Typography gutterBottom variant="h6" component="div" className="card-name">
               {creatorprofile.Name}

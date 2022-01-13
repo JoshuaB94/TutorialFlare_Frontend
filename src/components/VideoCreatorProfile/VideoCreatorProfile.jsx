@@ -3,13 +3,18 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Avatar } from '@mui/material';
 import { TiSocialYoutube, TiSocialTwitter, TiMail } from 'react-icons/ti';
-import { Link } from 'react-router-dom';
+import { AiFillCloseCircle } from 'react-icons/ai';
 import ReactPlayer from 'react-player';
 import UserRating from '../RateUser/RateUser';
+import Modal from 'react-modal';
+import HireMeForm from '../HireMeForm/HireMeForm';
 // import apiKey from '../apiKey'
+
+Modal.setAppElement('#root')
 
 const VideoCreatorProfile = () => {
     const [profile, setProfile] = useState("");
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     // const [videoPlaylist, setVideoPlaylist] = useState([]);
 
     useEffect(() => {
@@ -64,9 +69,9 @@ const VideoCreatorProfile = () => {
                                 <a href={profile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer" className="social-icon"><TiSocialTwitter /></a>
                                 <a href={`mailto:${profile.SocialLinks.emailAddress}`} className="social-icon"><TiMail /></a>
                             </div>
-                            <Link to="/hiremeform" className="hire-me">
-                                <button className="hire-button">Hire Me</button>
-                            </Link> 
+                            
+                            <button className="hire-button" onClick={() => setModalIsOpen(true)}>Hire Me</button>
+            
                             <div className="rating-bar">
                             <UserRating />
                             </div>
@@ -93,6 +98,18 @@ const VideoCreatorProfile = () => {
                                 controls='true' width="420px" height="320px"/>
                             </div>
                         </div>
+
+                        <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="hire-me-modal"
+                            style={{
+                                overlay: {
+                                    backgroundColor: 'rgba(0, 0, 0, 0.89)'
+                                }
+                            }}
+                        >
+                            <div className="modal-close-button"><AiFillCloseCircle onClick={() => setModalIsOpen(false)} className="modal-close"/></div>
+                            <h2>Send your Hiring Request</h2>
+                            <HireMeForm />
+                        </Modal>
                     </div>
                     
                 }
