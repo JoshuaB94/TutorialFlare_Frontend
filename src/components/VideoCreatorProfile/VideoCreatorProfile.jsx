@@ -19,7 +19,7 @@ const VideoCreatorProfile = () => {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:3200/api/video-creator/61d5d75258969c4f916422c7/profile`)
+        .get(`http://localhost:3200/api/video-creator/61dc2eb79d5f398b275a14e0/profile`)
         .then(res => {
             console.log(res)
             setProfile(res.data)
@@ -52,7 +52,7 @@ const VideoCreatorProfile = () => {
                 {profile &&
                     <div className="vc-profilearea">
                         <div className="vc-profilecontainer">
-                            <Avatar src={'http://localhost:3200/uploads/images/83490e30-6e43-11ec-bd87-57a16778a9a8.jpeg'} sx={{width: 180, height: 180}} className="vc-avatar" />
+                            <Avatar src={`http://localhost:3200/${profile.Image}`} sx={{width: 180, height: 180}} className="vc-avatar" />
                             <div className="vc-basicinfo">
                                 <h3>{profile.Name}</h3>
                                 <p>{profile.Location}</p>
@@ -113,7 +113,6 @@ const VideoCreatorProfile = () => {
                     </div>
                     
                 }
-
             </div>
         </div>
      );

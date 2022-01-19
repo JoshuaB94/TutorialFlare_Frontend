@@ -30,7 +30,7 @@ const VideoCreatorCard = () => {
     <div className="profile-cards">
       {profile.map((creatorprofile) => (
       <Card sx={{ maxWidth: 350 }} className="vc-profile-card" key={creatorprofile._id}>
-          <Avatar src={creatorprofile.Image} sx={{width: 90, height: 90}} className="card-avatar"/>
+          <Avatar src={`http://localhost:3200/${creatorprofile.Image}`} sx={{width: 120, height: 120}} className="card-avatar"/>
           <CardContent>
             <Typography gutterBottom variant="h6" component="div" className="card-name">
               {creatorprofile.Name}
@@ -39,9 +39,9 @@ const VideoCreatorCard = () => {
               {creatorprofile.Location}
             </Typography>
             <div className="card-social-links">
-              <a href={creatorprofile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer"><TiSocialYoutube className="youtube-icon" /></a>
-              <a href={creatorprofile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer"><TiSocialTwitter className="twitter-icon"/></a>
-              <a href={`mailto:${creatorprofile.SocialLinks.emailAddress}`}><TiMail className="mail-icon" /></a>
+              <a href={creatorprofile.SocialLinks.Youtube} target="_blank" rel="noopener noreferrer" className="youtube-icon"><TiSocialYoutube /></a>
+              <a href={creatorprofile.SocialLinks.Twitter} target="_blank" rel="noopener noreferrer" className="twitter-icon"><TiSocialTwitter /></a>
+              <a href={`mailto:${creatorprofile.SocialLinks.emailAddress}`}className="mail-icon" ><TiMail /></a>
             </div>
           </CardContent>
         <CardActions>

@@ -28,4 +28,43 @@
     align-items: center;
     justify-content: center;
     width: 100%
-  }
+}
+
+
+.mail-icon {
+    font-size: 28px;
+    color: #ffd12e;
+}
+
+.mail-icon:hover {
+    color: #006b61;
+}
+
+.youtube-icon {
+    font-size: 28px;
+    color: #ffd12e;
+}
+
+.youtube-icon:hover {
+    color: #006b61;
+}
+
+.twitter-icon {
+    font-size: 28px;
+    margin-left: 6px;
+    margin-right: 6px;
+    color: #ffd12e;
+}
+
+.twitter-icon:hover {
+    color: #006b61;
+}
+
+.profile-button {
+    padding: 10px !important;
+    background-color: #006b61 !important;
+}
+  
+.profile-button:hover {
+    background-color: #009485 !important;
+}

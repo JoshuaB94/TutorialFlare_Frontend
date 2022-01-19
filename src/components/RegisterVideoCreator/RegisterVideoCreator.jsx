@@ -33,13 +33,13 @@ const RegisterVideoCreator = () => {
 
     return ( 
         <div className="vc-registration-page">
-            <form className="vc-registration-form" onSubmit={handleSubmit} enctype="multipart/form-data">
+            <form className="vc-registration-form" onSubmit={handleSubmit} enctype="multipart/form-data" method="post" action="/register">
                 <h1 className="vc-registration-heading">Register as a Video Creator</h1>
                 <input placeholder="Full Name" type="text" value={name} onChange={(e) => registerName(e.target.value)}/>
                 <input placeholder="Email Address" type="text" value={email} onChange={(e) => registerEmail(e.target.value)}/>
                 <input placeholder="Enter a Password" type="text" value={password} onChange={(e) => registerPassword(e.target.value)}/>
                 <label for="imagefile">Select an image:</label>
-                <input type="file" id="imagefile" value={image} onChange={(e) => registerImage(e.target.value)}/>
+                <input type="file" id="imagefile" name="image" value={image} onChange={(e) => registerImage(e.target.value)}/>
                 <button className="vc-register-button" type="submit">Register</button>
                 <div className="link-wrapper">
                     <Link to="/videocreator-login" className="goto-link">Already have an account? Click to login.</Link>

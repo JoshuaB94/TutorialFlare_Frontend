@@ -30,6 +30,7 @@ const settings = [
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -118,7 +119,7 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar src={'http://localhost:3200/uploads/images/83490e30-6e43-11ec-bd87-57a16778a9a8.jpeg'} />
+                <Avatar src='/broken-image.jpg' />
               </IconButton>
             </Tooltip>
             <Menu
